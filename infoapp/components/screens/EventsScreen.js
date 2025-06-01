@@ -1,4 +1,3 @@
-import * as React from "react";
 import { View, Text, Pressable } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -28,8 +27,9 @@ const Stack = createStackNavigator();
 
 const EventsStack = () => (
   <Stack.Navigator>
-    <Stack.Screen name="EventsHome" component={EventsScreen} />
-    <Stack.Screen name="EventsSecond" component={EventsSecondScreen} />
+    <Stack.Screen name="EventsHome" component={EventsScreen}/>
+    
+    <Stack.Screen name="EventsSecond" component={EventsSecondScreen}/>
   </Stack.Navigator>
 );
 

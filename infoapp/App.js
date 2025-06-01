@@ -1,7 +1,8 @@
 import { createStaticNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-// Import Icon library
+// Expo already comes with icons, we just need to import the one we want
+// Go to https://icons.expo.fyi/ to see all available icons
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 // Import local screens
@@ -14,13 +15,13 @@ const Tabs = createBottomTabNavigator({
   screens: {
     Home: HomeScreen,
     Events: {
-      screen  : EventsStack,
+      screen: EventsStack,
       options: { headerShown: false }, // Hide header for the Events stack
     },
     Contact: ContactScreen,
   },
   screenOptions: ({ route }) => ({
-    // When the tab is focused, it will have a blue color, otherwise gray
+    // When the tab is focused, it will be red color, otherwise gray
     tabBarActiveTintColor: "red",
     tabBarInactiveTintColor: "gray",
     tabBarIcon: ({ focused, color, size }) => {

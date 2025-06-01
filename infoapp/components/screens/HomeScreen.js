@@ -1,11 +1,21 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { ScrollView, StyleSheet } from "react-native";
+
 // Use Pre Made components from react-native-paper
-import { Button, List, Card } from "react-native-paper";
+// Very 'Android' like components
+import { Button, List, Card, Text } from "react-native-paper";
+// There are other UI libraries 
+// like react-native-elements, Tamagui, and more.
+
+// You can even do tailwindcss with react-native!
 
 const HomeScreen = () => (
   // ScrollView allows the content to be scrollable
   // when it exceeds the screen height
+  // ScrollView will render all its children
+  // at once, so be careful with performance
+  
+  // Use Card.Cover to display an image at the top
   <ScrollView style={styles.container}>
     <Card style={styles.card}>
       <Card.Cover
